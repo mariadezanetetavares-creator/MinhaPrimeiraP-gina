@@ -1,141 +1,825 @@
-
+```html
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog</title>
+
+    <meta name="description"
+        content="Mundo Animal — um blog dedicado a curiosidades, conhecimentos e histórias incríveis sobre os animais.">
+
+    <meta name="author" content="Maria Vitória">
+
+    <title>Mundo Animal | Curiosidades e Conhecimento</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <header>
-        <h1>Seja bem vindo ao meu blog!</h1>
-        <p>Vou compartilhar conhecimentos sobre animais</p>
+
+    <!-- =========================
+         CABEÇALHO
+    ========================== -->
+    <header class="cabecalho">
+
+        <div class="container cabecalho-conteudo">
+
+            <a href="#" class="logo">
+                <span class="logo-icone">🐾</span>
+                <span>Mundo Animal</span>
+            </a>
+
+            <nav class="menu" aria-label="Navegação principal">
+                <a href="#inicio">Início</a>
+                <a href="#artigos">Artigos</a>
+                <a href="#curiosidades">Curiosidades</a>
+                <a href="#sobre">Sobre</a>
+            </nav>
+
+            <button class="btn-tema-escuro" type="button" aria-label="Ativar modo escuro">
+                🌙
+            </button>
+
+        </div>
+
     </header>
+
+
     <main>
-        <article>
-            <img src="imagem-blog.png"
-                alt="Logotipo conceitual de tecnologia e educação: um livro aberto de onde emerge um cérebro digital brilhante, cercado por ícones de Wi-Fi, circuitos e lâmpada de ideia. Cores em tons de azul e branco.">
-            <div>
-                <h2>Meu primeiro post</h2>
-                <p class="artigo-autor">Por: Maria Vitória</p>
-                <p>Boas-vindas ao meu blog! Aqui vou compartilhar dicas e curiosidades sobre animais.</p>
 
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+        <!-- =========================
+             HERO / APRESENTAÇÃO
+        ========================== -->
+        <section class="hero" id="inicio">
+
+            <div class="container hero-conteudo">
+
+                <div class="hero-texto">
+
+                    <span class="hero-tag">🐾 UM MUNDO CHEIO DE VIDA</span>
+
+                    <h1>
+                        Descubra o incrível
+                        <span>mundo dos animais</span>
+                    </h1>
+
+                    <p>
+                        Curiosidades, histórias e conhecimentos para você
+                        conhecer melhor os animais e entender a importância
+                        de cuidar e respeitar todas as formas de vida.
+                    </p>
+
+                    <a href="#artigos" class="btn-principal">
+                        Explorar artigos
+                        <span>→</span>
+                    </a>
+
+                </div>
+
+                <div class="hero-imagem">
+                    <img
+                        src="imagem-blog.png"
+                        alt="Animais representando a diversidade da vida selvagem">
+                </div>
+
             </div>
-        </article>
 
-        <article>
-            <img src="imagem-dados.jpg"
-                alt="Ilustração do planeta Terra cercado por elementos digitais, representando a conectividade global e a tecnologia.">
-            <div>
-                <h2>Os animais ajudam o ser humano a ter mais empatia, amor e bondade no dia a dia.</h2>
-                <p class="artigo-autor">Por: Mahatma Gandhi</p>
-                <p>"A grandeza de uma nação e seu progresso moral podem ser julgados pela maneira como seus animais são tratados"</p>
+        </section>
 
-                <p class="artigo-fonte">Fonte: <a
-                        href="https://www.jornalopcao.com.br/ultimas-noticias/90-dos-dados-no-mundo-foram-criados-apenas-nos-dois-ultimos-anos-diz-google-207812/">Jornal
-                        Opção</a>
-                </p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+
+        <!-- =========================
+             DESTAQUES
+        ========================== -->
+        <section class="destaques">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>✨ CONHEÇA MAIS</span>
+
+                    <h2>
+                        Um universo de descobertas
+                    </h2>
+
+                    <p>
+                        Cada animal possui uma história, um comportamento
+                        e características fascinantes.
+                    </p>
+
+                </div>
+
+                <div class="destaques-grid">
+
+                    <div class="destaque-card">
+                        <span class="destaque-icone">🐶</span>
+                        <h3>Animais domésticos</h3>
+                        <p>
+                            Conheça melhor nossos companheiros de todos os dias.
+                        </p>
+                    </div>
+
+                    <div class="destaque-card">
+                        <span class="destaque-icone">🦁</span>
+                        <h3>Vida selvagem</h3>
+                        <p>
+                            Descubra criaturas incríveis que vivem na natureza.
+                        </p>
+                    </div>
+
+                    <div class="destaque-card">
+                        <span class="destaque-icone">🐬</span>
+                        <h3>Curiosidades</h3>
+                        <p>
+                            Fatos surpreendentes sobre o comportamento animal.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
-        </article>
 
-        <article>
-            <img src="imagem-mouse.jpg"
-                alt="Ilustração de uma caixa de madeira com tampa e encaixe, representando armazenamento ou organização.">
-            <div>
-                <h2>O primeiro animal amigo e domesticado pelo homem foi o cachorro (ancestral derivado do lobo)</h2>
-                <p class="artigo-autor">Por:biólogo John Bradshaw (no livro CãoSenso)</p>
-                <p>"A domesticação do cão começou quando o primeiro lobo percebeu que humanos deixavam restos de comida melhores do que os que ele conseguia caçar sozinho — e o primeiro humano percebeu que um lobo por perto era o melhor sistema de alarme contra predadores. Não foi o homem quem domesticou o lobo; foi uma escolha mútua baseada na conveniência, que depois se transformou em amor."
-                </p>
+        </section>
 
-                <p class="artigo-fonte">Fonte: <a
-                        href="https://www.tecmundo.com.br/historia/10976-como-inventaram-o-mouse.htm">TecMundo</a></p>
 
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+        <!-- =========================
+             ARTIGOS
+        ========================== -->
+        <section class="artigos" id="artigos">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>📖 BLOG</span>
+
+                    <h2>
+                        Histórias que nos aproximam dos animais
+                    </h2>
+
+                    <p>
+                        Confira alguns dos conteúdos do Mundo Animal.
+                    </p>
+
+                </div>
+
+
+                <!-- Campo de pesquisa -->
+
+                <div class="pesquisa">
+
+                    <label for="campo-pesquisa">
+                        Pesquisar artigos
+                    </label>
+
+                    <input
+                        type="search"
+                        id="campo-pesquisa"
+                        placeholder="Digite o nome de um animal ou assunto..."
+                        autocomplete="off">
+
+                </div>
+
+
+                <div class="artigos-grid">
+
+
+                    <!-- ARTIGO 1 -->
+
+                    <article class="artigo-card">
+
+                        <div class="artigo-imagem">
+
+                            <img
+                                src="imagem-blog.png"
+                                alt="Imagem relacionada ao mundo dos animais">
+
+                            <span class="categoria">
+                                🐾 Boas-vindas
+                            </span>
+
+                        </div>
+
+                        <div class="artigo-conteudo">
+
+                            <span class="artigo-data">
+                                🌿 Mundo Animal
+                            </span>
+
+                            <h3>
+                                Bem-vindo ao Mundo Animal
+                            </h3>
+
+                            <p class="artigo-autor">
+                                Por: Maria Vitória
+                            </p>
+
+                            <p>
+                                Boas-vindas ao meu blog! Aqui vou compartilhar
+                                dicas, histórias e curiosidades incríveis
+                                sobre os animais.
+                            </p>
+
+                            <div class="artigo-acoes">
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Curtir artigo">
+                                    ❤️ <span>0</span>
+                                </button>
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Gostar do artigo">
+                                    👍 <span>0</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTIGO 2 -->
+
+                    <article class="artigo-card">
+
+                        <div class="artigo-imagem">
+
+                            <img
+                                src="imagem-dados.jpg"
+                                alt="Imagem representando conexão entre pessoas e animais">
+
+                            <span class="categoria">
+                                ❤️ Empatia
+                            </span>
+
+                        </div>
+
+                        <div class="artigo-conteudo">
+
+                            <span class="artigo-data">
+                                🌱 Reflexão
+                            </span>
+
+                            <h3>
+                                Os animais e a importância da empatia
+                            </h3>
+
+                            <p class="artigo-autor">
+                                Por: Mahatma Gandhi
+                            </p>
+
+                            <p>
+                                A maneira como tratamos os animais pode nos
+                                ensinar muito sobre empatia, amor,
+                                respeito e bondade.
+                            </p>
+
+                            <blockquote>
+                                “A grandeza de uma nação e seu progresso moral
+                                podem ser julgados pela maneira como seus
+                                animais são tratados.”
+                            </blockquote>
+
+                            <p class="artigo-fonte">
+                                Fonte:
+                                <a
+                                    href="https://www.jornalopcao.com.br/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Jornal Opção
+                                </a>
+                            </p>
+
+                            <div class="artigo-acoes">
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Curtir artigo">
+                                    ❤️ <span>0</span>
+                                </button>
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Gostar do artigo">
+                                    👍 <span>0</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTIGO 3 -->
+
+                    <article class="artigo-card">
+
+                        <div class="artigo-imagem">
+
+                            <img
+                                src="imagem-mouse.jpg"
+                                alt="Imagem relacionada a um cachorro">
+
+                            <span class="categoria">
+                                🐶 Cachorros
+                            </span>
+
+                        </div>
+
+                        <div class="artigo-conteudo">
+
+                            <span class="artigo-data">
+                                🐕 História
+                            </span>
+
+                            <h3>
+                                Como os cães se tornaram nossos companheiros?
+                            </h3>
+
+                            <p class="artigo-autor">
+                                Por: John Bradshaw
+                            </p>
+
+                            <p>
+                                O relacionamento entre humanos e cães possui
+                                uma história muito antiga e ajudou a formar
+                                uma das amizades mais conhecidas do mundo.
+                            </p>
+
+                            <p class="artigo-fonte">
+                                Fonte:
+                                <a
+                                    href="https://www.tecmundo.com.br/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    TecMundo
+                                </a>
+                            </p>
+
+                            <div class="artigo-acoes">
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Curtir artigo">
+                                    ❤️ <span>0</span>
+                                </button>
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Gostar do artigo">
+                                    👍 <span>0</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTIGO 4 -->
+
+                    <article class="artigo-card">
+
+                        <div class="artigo-imagem">
+
+                            <img
+                                src="imagem-bluetooth.jpg"
+                                alt="Imagem relacionada a animais e afeto">
+
+                            <span class="categoria">
+                                🐾 Afeto
+                            </span>
+
+                        </div>
+
+                        <div class="artigo-conteudo">
+
+                            <span class="artigo-data">
+                                💚 Comportamento
+                            </span>
+
+                            <h3>
+                                Os animais e os vínculos de afeto
+                            </h3>
+
+                            <p class="artigo-autor">
+                                Por: Nise da Silveira
+                            </p>
+
+                            <p>
+                                A relação entre seres humanos e animais pode
+                                criar vínculos importantes e mostrar como
+                                a presença de um animal pode transformar
+                                nosso cotidiano.
+                            </p>
+
+                            <p class="artigo-fonte">
+                                Fonte:
+                                <a
+                                    href="https://www.techtudo.com.br/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    TechTudo
+                                </a>
+                            </p>
+
+                            <div class="artigo-acoes">
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Curtir artigo">
+                                    ❤️ <span>0</span>
+                                </button>
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Gostar do artigo">
+                                    👍 <span>0</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTIGO 5 -->
+
+                    <article class="artigo-card">
+
+                        <div class="artigo-imagem">
+
+                            <img
+                                src="imagem-bug.jpg"
+                                alt="Mariposa com as asas abertas">
+
+                            <span class="categoria">
+                                🦋 Evolução
+                            </span>
+
+                        </div>
+
+                        <div class="artigo-conteudo">
+
+                            <span class="artigo-data">
+                                🔬 Ciência
+                            </span>
+
+                            <h3>
+                                O que os animais podem nos ensinar?
+                            </h3>
+
+                            <p class="artigo-autor">
+                                Por: Charles Darwin
+                            </p>
+
+                            <p>
+                                O estudo dos animais ajuda os cientistas
+                                a compreender melhor a evolução e a incrível
+                                diversidade da vida no planeta.
+                            </p>
+
+                            <p class="artigo-fonte">
+                                Fonte:
+                                <a
+                                    href="https://www.educamaisbrasil.com.br/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    Educa Mais Brasil
+                                </a>
+                            </p>
+
+                            <div class="artigo-acoes">
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Curtir artigo">
+                                    ❤️ <span>0</span>
+                                </button>
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Gostar do artigo">
+                                    👍 <span>0</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTIGO 6 -->
+
+                    <article class="artigo-card">
+
+                        <div class="artigo-imagem">
+
+                            <img
+                                src="imagem-webcam.jpg"
+                                alt="Imagem relacionada ao oceano">
+
+                            <span class="categoria">
+                                🌊 Oceano
+                            </span>
+
+                        </div>
+
+                        <div class="artigo-conteudo">
+
+                            <span class="artigo-data">
+                                🐬 Vida marinha
+                            </span>
+
+                            <h3>
+                                Golfinhos e baleias são mamíferos
+                            </h3>
+
+                            <p class="artigo-autor">
+                                Por: Aristóteles
+                            </p>
+
+                            <p>
+                                Apesar de viverem na água, golfinhos e baleias
+                                são mamíferos e possuem características muito
+                                diferentes dos peixes.
+                            </p>
+
+                            <p class="artigo-fonte">
+                                Fonte:
+                                <a
+                                    href="https://www.bbc.com/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    BBC
+                                </a>
+                            </p>
+
+                            <div class="artigo-acoes">
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Curtir artigo">
+                                    ❤️ <span>0</span>
+                                </button>
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Gostar do artigo">
+                                    👍 <span>0</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- ARTIGO 7 -->
+
+                    <article class="artigo-card">
+
+                        <div class="artigo-imagem">
+
+                            <img
+                                src="imagem-computador.jpg"
+                                alt="Imagem relacionada ao oceano e à preservação">
+
+                            <span class="categoria">
+                                🌊 Preservação
+                            </span>
+
+                        </div>
+
+                        <div class="artigo-conteudo">
+
+                            <span class="artigo-data">
+                                🌎 Meio ambiente
+                            </span>
+
+                            <h3>
+                                A importância de conhecer para preservar
+                            </h3>
+
+                            <p class="artigo-autor">
+                                Por: Jacques Cousteau
+                            </p>
+
+                            <p>
+                                Conhecer os animais e os ambientes onde vivem
+                                é um dos primeiros passos para desenvolver
+                                respeito e cuidado pela natureza.
+                            </p>
+
+                            <p>
+                                E aí, como podemos ensinar as próximas
+                                gerações a amar e cuidar dos nossos oceanos?
+                            </p>
+
+                            <p class="artigo-fonte">
+                                Fonte:
+                                <a
+                                    href="https://www.tnmoc.org/"
+                                    target="_blank"
+                                    rel="noopener noreferrer">
+                                    The National Museum of Computing
+                                </a>
+                            </p>
+
+                            <div class="artigo-acoes">
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Curtir artigo">
+                                    ❤️ <span>0</span>
+                                </button>
+
+                                <button
+                                    class="btn-reacao"
+                                    type="button"
+                                    aria-label="Gostar do artigo">
+                                    👍 <span>0</span>
+                                </button>
+
+                            </div>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
             </div>
-        </article>
 
-        <article>
-            <img src="imagem-bluetooth.jpg"
-                alt="Ilustração de dentes com coloração azul apresentando cáries, rachaduras e manchas próximas à gengiva.">
-            <div>
-                <h2>Nise da Silveira percebeu que os animais funcionavam como excelentes "catalisadores" de afeto.</h2>
-                <p class="artigo-autor">Por:Dra. Nise da Silveira e o Efeito dos Animais</p>
-                <p>"O animal reúne qualidades que o fazem muito apto a tornar-se ponto de referência estável no mundo externo. Ele não julga, não exige que o paciente se comporte de determinada maneira e oferece um afeto puro. A presença deles reorganiza o dia a dia e a mente de quem sofre."</p>
+        </section>
 
-                <p class="artigo-fonte">Fonte: <a
-                        href="https://www.techtudo.com.br/noticias/2022/07/o-que-e-bluetooth-e-de-onde-vem-o-nome-veja-significado-e-curiosidades.ghtml">TechTudo</a>
-                </p>
 
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+        <!-- =========================
+             CURIOSIDADES
+        ========================== -->
+        <section class="curiosidades" id="curiosidades">
+
+            <div class="container">
+
+                <div class="titulo-secao">
+
+                    <span>🤯 VOCÊ SABIA?</span>
+
+                    <h2>
+                        Curiosidades incríveis
+                    </h2>
+
+                    <p>
+                        O mundo animal está cheio de fatos surpreendentes.
+                    </p>
+
+                </div>
+
+                <div class="curiosidades-grid">
+
+                    <div class="curiosidade">
+                        <span>🐬</span>
+                        <p>
+                            Golfinhos são mamíferos, assim como os seres humanos.
+                        </p>
+                    </div>
+
+                    <div class="curiosidade">
+                        <span>🐕</span>
+                        <p>
+                            Os cães possuem uma história de convivência com
+                            humanos que remonta a milhares de anos.
+                        </p>
+                    </div>
+
+                    <div class="curiosidade">
+                        <span>🦋</span>
+                        <p>
+                            As borboletas e mariposas pertencem ao grupo
+                            dos lepidópteros.
+                        </p>
+                    </div>
+
+                </div>
+
             </div>
-        </article>
 
-        <article>
-            <img src="imagem-bug.jpg"
-                alt="Ilustração de uma mariposa com asas abertas em tons de marrom, com padrões circulares nas asas.">
-            <div>
-                <h2>Uma das reflexões mais famosas e profundas sobre os animais</h2>
-                <p class="artigo-autor">Por: Charles Darwin, o pai da teoria da evolução.</p>
-                <p>A diferença entre a mente do homem e a dos animais superiores, por maior que seja, é certamente de grau e não de espécie</p>
+        </section>
 
-                <p class="artigo-fonte">Fonte: <a
-                        href="https://www.educamaisbrasil.com.br/educacao/dicas/o-que-e-bug-qual-a-origem-da-expressao">Educa
-                        Mais Brasil</a></p>
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
+
+        <!-- =========================
+             SOBRE
+        ========================== -->
+        <section class="sobre" id="sobre">
+
+            <div class="container sobre-conteudo">
+
+                <div class="sobre-icone">
+                    🐾
+                </div>
+
+                <div>
+
+                    <span class="sobre-tag">
+                        🌱 SOBRE O BLOG
+                    </span>
+
+                    <h2>
+                        Um espaço para aprender,
+                        descobrir e respeitar.
+                    </h2>
+
+                    <p>
+                        O Mundo Animal nasceu com o objetivo de compartilhar
+                        conhecimentos e curiosidades sobre os animais,
+                        aproximando as pessoas da natureza e mostrando
+                        como cada ser vivo possui sua própria importância.
+                    </p>
+
+                    <p>
+                        Afinal, quanto mais conhecemos a natureza,
+                        mais podemos aprender a respeitá-la.
+                    </p>
+
+                </div>
+
             </div>
-        </article>
 
-        <article>
-            <img src="imagem-webcam.jpg"
-                alt="Ilustração de uma câmera em tripé ao lado de uma cafeteira preparando café.">
-            <div>
-                <h2>os golfinhos e as baleias não são peixes, mas sim mamíferos.</h2>
-                <p class="artigo-autor">Por: Aristóteles no século IV a.C</p>
-                <p>"O golfinho, a baleia e todos os outros cetáceos não têm brânquias, mas sim um espiráculo e pulmões... e dão à luz filhotes vivos, amamentando-os com leite."</p>
+        </section>
 
-                <p class="artigo-fonte">Fonte: <a href="https://www.bbc.com/news/technology-20439301">BBC</a></p>
-
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
-
-        <article>
-            <img src="imagem-computador.jpg"
-                alt="Ilustração de uma máquina sobre uma fita com números e símbolos, representando o processamento de dados.">
-            <div>
-                <h2>O Pensamento de Jacques Cousteau
-                <p class="artigo-autor">Por: Jacques Cousteau </p>
-                <p>"Só protegemos o que amamos, só amamos o que compreendemos e só compreendemos o que nos é ensinado.
-
-                    <br><br>Jacques Cousteau, o famoso pesquisador do oceano, disse que as pessoas so protegem o que amam, e nos so amamos o que conhecemos. Ele mostrou que animais como os golfinhos podem ser muito proximos dos humanos e criar laços de amizade verdadeiros.
-
-                    <br><br> E aí como podemos ensinar as próximas gerações a amar e cuidar dos nossos oceanos?
-                </p>
-
-                <p class="artigo-fonte">Fonte: <a href="https://www.tnmoc.org/colossus" target="_blank">The National
-                        Museum
-                        of Computing</a></p>
-
-                <button>❤️ <span>0</span></button>
-                <button>👍 <span>0</span></button>
-            </div>
-        </article>
-
-        <button class="btn-tema-escuro">🌓</button> 
     </main>
 
+
+    <!-- =========================
+         RODAPÉ
+    ========================== -->
+
+    <footer class="rodape">
+
+        <div class="container rodape-conteudo">
+
+            <div>
+
+                <a href="#" class="logo">
+                    <span class="logo-icone">🐾</span>
+                    <span>Mundo Animal</span>
+                </a>
+
+                <p>
+                    Conhecimento, curiosidades e amor pelos animais. 🐾
+                </p>
+
+            </div>
+
+            <div class="rodape-links">
+
+                <a href="#inicio">Início</a>
+                <a href="#artigos">Artigos</a>
+                <a href="#curiosidades">Curiosidades</a>
+                <a href="#sobre">Sobre</a>
+
+            </div>
+
+        </div>
+
+        <div class="rodape-final">
+
+            <p>
+                © 2026 Mundo Animal — Feito com ❤️ por Maria Vitória
+            </p>
+
+        </div>
+
+    </footer>
+
+
+    <!-- JavaScript -->
+
     <script src="script.js"></script>
+
 </body>
 
 </html>
+```
